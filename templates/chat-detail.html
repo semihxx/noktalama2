@@ -1,0 +1,47 @@
+<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+  C:\Users\PLATON\AppData\Local\Android\android-sdk
+-->
+<style>
+.deneme{
+    width: 100%;
+            height: 100%;
+            -webkit-transition: width 8s linear;
+            background-color: #FFEFEF;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+}
+  .w0{
+    width: 0%;
+  }
+  .w100{
+    width: 100%;
+    -webkit-transition: width 0s linear;
+  }
+  .dogru{
+    background-color: green;
+    color: #fff;
+  }
+  .yanlis{
+    background-color: red;
+  }
+</style>
+<ion-view view-title="Tırnak İşareti {{puan*10}} puan">
+  <ion-content class="padding">
+     <h5>Doğru seçeneği bulup 10 sn içinde işaretleyiniz.</h2>
+     <div class="list card" ng-click="cevapla(value)" data-ng-repeat="value in secenekler track by value">
+      <div class="item item-body {{durum}}">
+        <div class="deneme {{gosterge}} {{durum}}"></div>
+        <div>
+          {{value}}
+        </div>
+      </div>
+    </div>
+  
+  </ion-content>
+</ion-view>
